@@ -37,6 +37,13 @@ public class Main {
             students.get(i).PrintNames();
         }
         System.out.println("");
+
+        students.sort(new StudentComp());  
+        System.out.println("After Sort");
+        for(int i = 0; i < students.size(); i++ ) {
+            students.get(i).PrintNames();
+        }
+        System.out.println("");
     }
 
     public static void IsShape(Shape shape) {
