@@ -6,9 +6,19 @@ public class Main {
 
         StudentLogic();
 
-        Triangle triangle = new Triangle(100, 3);
+        Triangle triangle = new Triangle(100, 3, 5, 5,10);
         double area = triangle.getArea();
         System.out.println("Triangle area: " + area);
+
+        Circle c = new Circle(22);
+        Rectangle r = new Rectangle();
+
+        IsShape(r);
+        IsShape(c);
+        IsShape(triangle);
+        IsShape(null);
+
+
     }
 
     public static void StudentLogic() {
@@ -27,5 +37,13 @@ public class Main {
             students.get(i).PrintNames();
         }
         System.out.println("");
+    }
+
+    public static void IsShape(Shape shape) {
+        if(shape instanceof Shape) {
+            System.out.println("This is a shape");
+        } else {
+            System.out.println("This is not a shape");
+        }
     }
 }
